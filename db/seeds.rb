@@ -11,8 +11,8 @@ User.destroy_all
 Category.destroy_all
 Card.destroy_all
 
-sunjet = User.create(username: "SunJet", password: "password123")
-billy = User.create(username: "Billy", password: "password123")
+sunjet = User.create(username: "SunJet", password_digest: "password123", email: "sunjet@sunjet.com")
+billy = User.create(username: "Billy", password_digest: "password123", email: "billy@billy.com")
 
 react = Category.create(name: "React", user_id: sunjet.id)
 rails = Category.create(name: "Rails", user_id: billy.id)

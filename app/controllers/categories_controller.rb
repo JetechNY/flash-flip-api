@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+    skip_before_action :authorized, only: [:create]
+    
     def show
         category = Category.find(params[:id])
         render json: category

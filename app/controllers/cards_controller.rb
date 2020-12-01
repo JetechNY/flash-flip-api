@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+    skip_before_action :authorized, only: [:create]
+    
     def show
         card = Card.find(params[:id])
         render json: card
