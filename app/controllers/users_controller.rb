@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         users = User.all
         render json: users, except: [:created_at, :updated_at]
     end
-    
+
     def create
         @user = User.create(user_params)
         if @user.valid?
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        user.update!(username: params[:username], password: params[:password])
+        user.update!(username: params[:username], email: params[:email], password: params[:password])
         render json: user
     end
 
