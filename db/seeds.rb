@@ -14,7 +14,7 @@ s_vocab = Category.create(name: "Japanese Vocab", user_id: sunjet.id)
 
 b_react = Category.create(name: "React", user_id: billy.id)
 b_hiragana = Category.create(name: "Hiragana", user_id: billy.id)
-b_hangol = Category.create(name: "Hangol Radicals", user_id: billy.id)
+b_hangol = Category.create(name: "Hangul", user_id: billy.id)
 b_vocab = Category.create(name: "Japanese Vocab", user_id: billy.id)
 
 #cards
